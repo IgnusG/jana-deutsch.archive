@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--
+Dieses Material steht unter der Creative-Commons-Lizenz Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International.
+Um eine Kopie dieser Lizenz zu sehen, besuchen Sie http://creativecommons.org/licenses/by-nc-nd/4.0/.
+-->
+<html>
+    <head>
+        <title>Deutschunterricht</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <script src='JS/jquery.js'></script>
+        
+        <script src="JS/functions.js"></script>
+        <script src="JS/menu.js"></script>
+        <script src='JS/hash.js'></script>
+        <!--JS Libraries other-->
+        <script src="JS/sha512.min.js"></script>
+    </head>
+    <body>
+
+        <!-- SVG SOURCE -->
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0" height="0" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="display: none">
+        <g id="arrowUp-icon">
+            <path d="M50,6.337c-24.115,0-43.664,19.549-43.664,43.664c0,24.114,19.549,43.663,43.664,43.663
+            c24.114,0,43.663-19.549,43.663-43.663C93.663,25.886,74.114,6.337,50,6.337z M50.049,32.688l28.688,28.687l-5.936,5.938
+            L49.999,44.509L27.198,67.311l-5.935-5.936l25.769-25.77L50.049,32.688z"/>
+        </g>
+        </svg>
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0" height="0" viewBox="-206 -205.997 512 511.996" enable-background="new 0 0 100 100" xml:space="preserve" style="display: none">
+        <g id="delete-icon">
+            <path d="M240.955-74.117L116.848,50L240.955,174.12c18.459,18.46,18.459,48.374,0,66.841
+            c-9.223,9.224-21.316,13.839-33.404,13.839c-12.107,0-24.201-4.608-33.418-13.839L50,116.835L-74.124,240.961
+            c-9.223,9.224-21.317,13.839-33.414,13.839c-12.094,0-24.181-4.608-33.411-13.839c-18.46-18.453-18.46-48.374,0-66.841L-16.845,50
+            L-140.955-74.117c-18.461-18.464-18.461-48.382,0-66.845c18.457-18.447,48.36-18.447,66.824,0L50-16.839l124.12-124.123
+            c18.468-18.447,48.374-18.447,66.827,0C259.414-122.499,259.414-92.581,240.955-74.117z"/>
+        </g>
+        </svg>
+
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="540.111px" height="540.101px" viewBox="-220.058 -220.05 540.111 540.101"
+             enable-background="new -220.058 -220.05 540.111 540.101" xml:space="preserve" style="display: none">
+        <g id="add-icon">
+            <path d="M97.26-172.789l0.007,175.52l175.523,0.01c26.105,0,47.258,21.153,47.264,47.264
+            c0,13.042-5.287,24.859-13.835,33.406c-8.562,8.562-20.372,13.854-33.416,13.845L97.257,97.26l0.002,175.539
+            c0,13.043-5.287,24.858-13.842,33.412c-8.551,8.553-20.356,13.84-33.41,13.84c-26.102,0.005-47.259-21.152-47.264-47.264
+            L2.731,97.266l-175.522-0.004c-26.11-0.002-47.265-21.158-47.267-47.267c0.007-26.095,21.152-47.24,47.252-47.252L2.735,2.738
+            L2.733-172.796c0.016-26.103,21.162-47.25,47.254-47.254C76.101-220.053,97.257-198.898,97.26-172.789z"/>
+        </g>
+        </svg>
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0" height="0" viewBox="0 0 512 512" enable-background="new 0 0 100 100" xml:space="preserve" style="display: none">
+        <g id="edit-icon">
+            <path d="M481.414,159.589l-21.493,21.509L330.928,52.121l21.494-21.509c23.75-23.75,62.254-23.75,86.004,0
+            l42.988,43.002C505.134,97.35,505.134,135.839,481.414,159.589z M180.442,417.529c-5.938,5.938-5.938,15.557,0,21.494
+            c5.938,5.967,15.556,5.967,21.494,0l236.491-236.431l-21.523-21.509L180.442,417.529z M72.944,310.061
+            c-5.938,5.938-5.938,15.557,0,21.494s15.556,5.938,21.494,0l236.49-236.446l-21.494-21.494L72.944,310.061z M352.392,116.587
+            l-236.46,236.461c-11.875,11.846-11.846,31.112,0,42.987c11.875,11.875,31.113,11.935,43.017-0.03l236.46-236.416L352.392,116.587z
+             M158.889,460.458c-7.273-7.273-10.777-16.507-12.083-26.007c-3.087,0.476-6.205,0.921-9.381,0.921
+            c-16.239,0-31.498-6.353-42.987-17.841c-11.49-11.52-17.813-26.749-17.813-42.988c0-2.969,0.445-5.848,0.86-8.729
+            c-9.827-1.336-18.91-5.641-26.035-12.766c-0.684-0.684-0.921-1.604-1.544-2.346L12.796,499.2l148.11-37.079
+            C160.254,461.527,159.513,461.082,158.889,460.458z"/>
+        </g>
+        </svg>
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0" height="0" viewBox="256.001 256.007 512 511.986" enable-background="new 0 0 100 100" xml:space="preserve" style="display: none">
+        <g id="settings-icon">
+            <path id="settings_1_" d="M749.269,474.72l-50.719-8.46c-3.687-15.071-9.061-29.477-16.061-42.913l32.468-40.257
+            c6.905-8.508,6.592-20.749-0.688-28.96l-20.171-22.702c-7.313-8.203-19.437-9.938-28.687-4.094l-43.373,27.266
+            c-19.078-13.329-40.688-23.171-63.999-28.883l-8.485-50.99c-1.78-10.796-11.124-18.719-22.092-18.719h-30.397
+            c-10.945,0-20.32,7.922-22.062,18.719l-8.531,51.006c-19.273,4.719-37.344,12.335-53.834,22.367l-41.25-29.438
+            c-8.89-6.351-21.1-5.358-28.858,2.383l-21.476,21.491c-7.741,7.758-8.734,19.968-2.367,28.858l29.507,41.328
+            c-9.938,16.367-17.476,34.333-22.194,53.436l-51.28,8.563c-10.78,1.781-18.718,11.125-18.718,22.093v30.375
+            c0,10.967,7.938,20.312,18.718,22.092l51.28,8.563c3.875,15.718,9.5,30.732,16.976,44.654l-32.32,40.029
+            c-6.882,8.5-6.593,20.75,0.688,28.953l20.156,22.702c7.313,8.219,19.444,9.922,28.694,4.094l43.999-27.64
+            c18.618,12.734,39.679,22.093,62.28,27.64l8.531,50.998c1.741,10.798,11.116,18.72,22.062,18.72h30.397
+            c10.968,0,20.312-7.922,22.092-18.719l8.5-50.999c19.033-4.655,36.874-12.14,53.218-21.999l42.968,30.688
+            c8.875,6.374,21.094,5.374,28.845-2.392l21.482-21.483c7.733-7.734,8.781-19.938,2.358-28.844l-30.591-42.89
+            c9.967-16.422,17.545-34.421,22.233-53.607l50.717-8.469c10.812-1.781,18.718-11.125,18.718-22.093v-30.374
+            C767.986,485.845,760.081,476.501,749.269,474.72z M512.806,607.997c-53.006,0-95.997-42.998-95.997-95.997
+            c0-53.006,42.991-95.998,95.997-95.998c52.998,0,95.996,42.991,95.996,95.998C608.802,564.999,565.804,607.997,512.806,607.997z"/>
+        </g>
+        </svg>
+
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="204.841px" height="300.645px" viewBox="0 0 204.841 300.645" enable-background="new 0 0 204.841 300.645" xml:space="preserve" style="display: none">
+        <g id="fullarrow-icon">
+            <polygon points="0,150.322 204.841,300.645 204.841,0 "/>
+        </g>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="118" height="97" viewBox="0 0 118 97" enable-background="new 0 0 118 97" xml:space="preserve" style="display: none">
+        <g id="menu-icon">
+            <rect class="colorSVG" width="118" height="20"/>
+            <rect y="38" class="colorSVG" width="118" height="20"/>
+            <rect y="77" class="colorSVG" width="118" height="20"/>
+        </g>
+        </svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" style="display: none">
+            <g id="settingsMenu-icon">
+                <path d="M224 64v-8c0-13.2-10.8-24-24-24h-80c-13.2 0-24 10.8-24 24v8H0v64h96v8c0 13.2 10.8 24 24 24h80c13.2 0 24-10.8 24-24v-8h288V64H224zM128 128V64h64v64H128zM416 216c0-13.2-10.8-24-24-24h-80c-13.2 0-24 10.8-24 24v8H0v64h288v8c0 13.2 10.8 24 24 24h80c13.2 0 24-10.8 24-24v-8h96v-64h-96V216zM320 288v-64h64v64H320zM224 376c0-13.2-10.8-24-24-24h-80c-13.2 0-24 10.8-24 24v8H0v64h96v8c0 13.2 10.8 24 24 24h80c13.2 0 24-10.8 24-24v-8h288v-64H224V376zM128 448v-64h64v64H128z"/>
+            </g>
+        </svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" xml:space="preserve" enable-background="new 0 0 36 36" style="display: none">
+            <g id="reload-icon">
+                <path d="M27.084 9.036c-0.491-0.354-1.174-0.243-1.527 0.247 -0.354 0.49-0.243 1.174 0.247 1.527 3.885 2.802 5.143 7.95 2.992 12.24 -1.165 2.322-3.164 4.052-5.629 4.87 -2.465 0.819-5.102 0.628-7.424-0.536 -2.321-1.165-4.051-3.164-4.87-5.628 -0.818-2.466-0.627-5.102 0.538-7.424 1.415-2.822 4.126-4.788 7.252-5.259 0.021-0.002 0.039-0.01 0.06-0.015l0.045 2.161c0.006 0.239 0.155 0.452 0.377 0.539 0.223 0.087 0.477 0.031 0.642-0.142l3.112-3.247c0.227-0.236 0.218-0.611-0.017-0.837l-3.248-3.112c-0.173-0.166-0.428-0.211-0.647-0.114 -0.072 0.031-0.136 0.077-0.189 0.132 -0.106 0.111-0.167 0.262-0.165 0.422l0.043 2.058c-0.11-0.018-0.223-0.025-0.339-0.008 -3.829 0.577-7.149 2.985-8.882 6.441 -2.945 5.872-0.563 13.044 5.308 15.989 1.709 0.857 3.528 1.263 5.321 1.263 4.368 0 8.58-2.408 10.668-6.571C33.387 18.776 31.845 12.469 27.084 9.036z"/>
+            </g>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" enable-background="new 0 0 16 16" style="display:none">
+        <g id="info-icon">    
+            <path fill-rule="evenodd" d="m8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm1 13h-2v-6h2v6zm0-8h-2v-2h2v2z"/>
+        </g>
+        </svg>
+
+        <!-- SVG SOURCE END -->
+        
+        <div class="noSupport center-abs" style="height: 350px">
+            <div class="noSupport">Dieses Gerät wird leider noch nicht Unterstützt</div>
+            <div class="noSupport">This device is sadly not yet supported</div>
+        </div>
+        
+        <div id="stringCaptcha"></div>
+        <div id="stringCaptcha2"></div>
+        
+        <div id="unloaded">
+            <div class='cover'></div>
+            <div id="maintenance" class="center-abs hide">
+                <div class="caption">Maintenance mode</div>
+                <div style="margin-top: 25px;margin-bottom: 20px">
+                    <div style="font-size: 1.2em">
+                        <span class="unexpected">We are sorry that you can't reach us, but we were forced to put this site down due to technical difficulties. We will do our best to fix this as soon as possible. We promise!</span>
+                        <span class="expected">This site has been put down for scheduled maintenance and upgrade. We will do our best to get it online as soon as possible. In the meantime, relax and have a nice cup of tea</span>
+                    </div>
+                    <div style="margin-top: 5px;color: rgba(0, 0, 0, 0.65)">The site will be available in around <span class="timeleft" style="color: rgba(255, 165, 0, 0.8)">8 hours</span></div>
+                </div>
+                <div class="info">If you have any questions please contact the <a onclick="system.ignoreExit = true" href="mailto: admin@jana-deutsch.com?subject=Ticket: jana-deutsch.com MM [DO NOT EDIT THIS!]">Admin</a></div>
+            </div>
+            <div id='wait' class='center-abs open'><div>Loading</div><div><div class='loader'><div class='loaderPoint'><div></div></div><div class='loaderPoint'><div></div></div><div class='loaderPoint'><div></div></div></div></div></div>
+            <!--Append after cover class not into-->
+            <div class="license" onclick="$('.license').removeClass('show');$('#unloaded').delay(400).hide(0);$('#loaded').removeClass('blurred')">
+                <div class="center-abs">
+                    <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.de"><img alt="Creative Commons Lizenzvertrag" style="border-width:0;width: 80px;cursor: pointer;" src="CSS/images/Creative Commons.png"></a>
+                    <br>
+                    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Source Code der Webseite <a href="http://jana-deutsch.com">jana-deutsch.com</a></span> von dem Autor <a xmlns:cc="http://creativecommons.org/ns#" href="http://jana-deutsch.com" property="cc:attributionName" rel="cc:attributionURL">Jonatan Juhas</a> ist lizenziert unter einer <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.de">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz</a>.
+                    <br>
+                    <span>Diese Lizenz ist unter anderem anhand des Gesetz Nr. 618/2003 - Slowakei, gültig von 4/Dezember/2003, über Urheberrecht und gewandte Schutzrechte (Urhebergesetz), geschützt</span>
+                </div>
+            </div>
+        </div>
+        <div id='loaded' style="opacity: 0">
+            <div class="cover" id="privacyPolicy">
+                <div class="center-horiz">
+                    <div class="closeIcon" onkeydown="" onclick="$('#privacyPolicy').removeClass('show');setTimeout(function(){$('#privacyPolicy > div').css('height','').parent().hide()},400)">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="headerMain">Datenschutzerklärung</div>
+                    <div class="header">Allgemeines</div>
+                    Ihre personenbezogenen Daten (z.B. Anrede, Name, Anschrift, E-Mail-Adresse) werden von uns nur gemäß den Bestimmungen des slowakischen Datenschutzrechts verarbeitet. Die nachfolgenden Vorschriften informieren Sie über Art, Umfang und Zweck der Erhebung, Verarbeitung und Nutzung personenbezogener Daten. Diese Datenschutzerklärung bezieht sich nur auf unsere Webseiten. Falls Sie über Links auf unseren Seiten auf andere Seiten weitergeleitet werden, informieren Sie sich bitte dort über den jeweiligen Umgang mit Ihren Daten.
+                    <br>
+                    <div class="header">Bestandsdaten</div>
+                    (1) Ihre personenbezogenen Daten, soweit diese für die Begründung, inhaltliche Ausgestaltung oder Änderung des Vertragsverhältnisses erforderlich sind (Bestandsdaten), werden ausschließlich zur Vertragsabwicklung verwendet. So muss z.B. zur Zustellung der Waren Ihr Name und Ihre Anschrift an den Warenlieferanten weitergegeben werden. 
+                    <br>
+                    (2) Ohne Ihre ausdrückliche Einwilligung oder ohne gesetzliche Grundlage werden Ihre personenbezogenen Daten nicht an außerhalb der Vertragsabwicklung stehende Dritte weitergegeben. Nach vollständiger Vertragsabwicklung werden Ihre Daten für die weitere Verwendung gesperrt. Nach Ablauf der steuer- und handelsrechtlichen Vorschriften werden diese Daten gelöscht, sofern Sie nicht ausdrücklich in die weitere Nutzung eingewilligt haben. 
+                    <br>
+                    <div class="header">Webanalyse mit Google Analytics</div>
+                    Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (Google). Google Analytics verwendet sog.Cookies, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href="http://tools.google.com/dlpage/gaoptout?hl=de" target="_blank">http://tools.google.com/dlpage/gaoptout?hl=de</a>
+                    <br>
+                    <div class="header">Informationen über Cookies</div>
+                    (1) Zur Optimierung unseres Internetauftritts setzen wir Cookies ein. Es handelt sich dabei um kleine Textdateien, die im Arbeitsspeicher Ihres Computers gespeichert werden. Diese Cookies werden nach dem Schließen des Browsers wieder gelöscht. Andere Cookies verbleiben auf Ihrem Rechner (Langzeit-Cookies) und erkennen ihn beim nächsten Besuch wieder. Dadurch können wir Ihnen einen besseren Zugang auf unsere Seite ermöglichen.
+                    <br>
+                    (2) Das Speichern von Cookies können Sie verhindern, indem Sie in Ihren Browser-Einstellungen "Cookies blockieren" wählen. Dies kann aber eine Funktionseinschränkung unserer Angebote zur Folge haben. 
+                    <br>
+                    <div class="header">Auskunft</div>
+                    Nach dem datenschutzgesetz haben Sie ein Recht auf unentgeltliche Auskunft über Ihre gespeicherten Daten sowie ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Fragen können Sie z.B. über die folgende E-Mail-Adresse stellen: <a onclick="system.ignoreExit = true" href="mailto: admin@jana-deutsch.com?subject=Ticket: jana-deutsch.com [DO NOT EDIT THIS!]" style="color: rgba(255, 165, 0, 0.77)">admin@jana-deutsch.com</a>
+                    <br><br>
+                    <a target="_blank" href="http://www.muster-vorlagen.net/datenschutzerklaerungs-generator.html" style="font-size: 0.9em;opacity: 0.8;position: relative;top: 30px;border-bottom: 1px solid rgba(0, 0, 0, 0.25);">Muster Text von Drittanbieter Webseite</a>
+                    <div style="text-align: right;position: relative;top: 10px;opacity: 0.8;pointer-events: none">Gültig ab 15.11.2014</div>
+                    <br><br>
+                </div>
+            </div>
+            <div id="menu">
+                <svg viewBox="0 0 118 97" class="icon"><use xlink:href="#menu-icon"></use></svg>
+            </div>
+            <div id="sidebar">
+                <div id="upperMenu">
+                    <svg class="settings icon" viewBox="0 0 512 512"><use xlink:href="#settingsMenu-icon"></use></svg>
+                </div>
+                <div>
+                    <div class="title">
+                        <div class="hello"></div>
+                        <div class="tryAgain"></div>
+                        <div class="youDidIt"></div>
+                    </div>
+                    <div id="notifCentre">
+                        <div></div>
+                    </div>
+                    <div id="pInfo">
+                        <div class="login">
+                            <div>
+                                <span class="fake">Login</span>
+                                <div id="statusContainer">
+                                    <div class="verify">
+                                        <div>.</div>
+                                        <div>.</div>
+                                        <div>.</div>
+                                        <div>verifying</div>
+                                    </div>
+                                    <div class="accept">accepted</div>
+                                    <div class="fail">failed</div>
+                                </div>
+                                <div class="loginText">Login</div>
+                                <div class="recoveryText">Recovery</div>
+                                <div class="lost">Forgot Password?</div>
+                            </div>
+                            <form id="credentials">
+                                <input class="username" name="username">
+                                <div class="passwordCont">
+                                    <input class="password" type="password">
+                                </div>
+                            </form>
+                            <div class="infoContainer">
+                                <div class="wrong"></div>
+                                <div id="submit"></div>
+                            </div>
+                        </div>
+                        <div class="logged">
+                            <div style="display: inline-block;">
+                                <span class="usernameText"></span>
+                                <span class="username"></span>
+                            </div>
+
+                            <div style="margin-top: 15px;">
+                                <span class="dateText"></span>
+                                <span id="activeDate"></span>
+                                <span id="activeTime"></span>
+                            </div>
+                        </div>
+                        <div class="logout">
+                            <div style="text-align: center;font-size: 1.5em">Logging out</div>
+                            <div class="loader">
+                                <div class="loaderPoint"><div></div></div>
+                                <div class="loaderPoint"><div></div></div>
+                                <div class="loaderPoint"><div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="logout" class="hidden">Logout</span>
+                    <div id="credits">
+                        <span>Powered by</span>
+                        <div class="center-horiz" style="width: 270px;">
+                            <a rel="author" class="author icon" href="undefined">
+                                <object type="image/svg+xml" data="CSS/images/simplCoding.svg" style="height: 50px;pointer-events: none;" class="icon"></object>
+                            </a>
+                            <a class="hosting icon" href="http://api.hostinger.sk/redir/4547983" target="_blank" rel="nofollow">
+                                <object type="image/svg+xml" data="CSS/images/hostinger.svg" style="height: 35px;pointer-events: none;"></object>
+                            </a>
+                        </div>
+                        <div id="version"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="warn" class="hide">
+                <div class="center-horiz">
+                    <div class="center-vert">
+                        <span id="warnText" class="unselectable">Error : Message text failed to load</span>
+                    </div>
+                    <div class="buttonContainer center-vert">
+                        <div class="button confirm">
+                            <div class="background"></div>
+                            <span class="centerText-vert center-horiz unselectable">OK</span>
+                        </div>
+                        <div class="button cancel">
+                            <div class="background"></div>
+                            <span class="centerText-vert center-horiz unselectable">Cancel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header>
+                <div class='center-horiz' style="height: inherit">
+                    <div id="logo"><a href="#index.html" style="position: absolute"><img src="CSS/images/LogoSetx125.png"/></a></div>
+                    <nav id="mainNav">
+                        <table>
+                            <tr>
+                                <td><a href="index.html" class="JS_psaccess_transformScale current">Home</a></td>
+                                <td><a href="people.html">Kurse</a></td>
+                                <td><a href="about.html">Info</a></td>
+                            </tr>
+                        </table>
+                    </nav>
+                </div>
+            </header>
+            <div id="content" class="center-horiz">
+                <div class="wrapper move0" id="index-content">
+                    <div id="inside">
+                        <script src="JS/mash.js"></script>
+                        
+                        <div style="padding: 50px 30px 20px 20px;">
+                            <img src="CSS/images/Me.jpg" class="persona ">
+                            <div id="welcomeContainer">
+                                <div class="title">DEUTSCH effektiv &amp; erfolgreich</div>
+                                <div class="quote">
+                                    <div class="quoteText">Wer auf andre Leute wirken will, der muss erst einmal in ihrer Sprache mit ihnen reden.</div>
+                                    <div class="quoteAuthor">Kurt Tucholsky</div>
+                                    <div class="quoteStrip" style="background-color: orange;"></div>
+                                </div>
+                                <div style="margin-top: 30px;font-size: 1.2em;width: 650px;">Herzlich Willkommen auf meiner Webseite! Hier finden Sie alle wichtigen Informationen zu allen Deutschkursen.</div>
+                            </div>
+
+                            <div style="margin-top: 30px;margin-bottom: 30px;font-size: 1.2em;">Möchten Sie die Sprache im gesellschaftlichen und beruflichen Leben wirksam und flexibel gebrauchen? Und möchten Sie sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern können? Ich helfe Ihnen sehr gerne dabei.</div>
+                            <div style="font-size: 1.3em;">Mein Angebot: </div>
+                            <div style="padding-left: 20px;margin-top: 10px; margin-bottom: 20px; font-size: 1.1em">
+                                <div style="width: 550px;display: inline-block;">
+                                    <span class="unselectable" style="font-size: 1.1em">Im Unterricht</span>
+                                    <ul class="listOfAwesomeness">
+                                        <li>ausführliche Unterrichtsunterlagen</li>
+                                        <li>intensive Vermittlung von Wortschatz/Sprache/Kultur</li>
+                                        <li>berufsbegleitender Aspekt</li>
+                                    </ul>
+                                </div>
+                                <div style="width: 400px;display: inline-block;position: relative;top: -30px;">
+                                    <span class="unselectable" style="font-size: 1.1em">Sprachkurse</span>
+                                    <ul class="listOfAwesomeness">
+                                        <li>Gruppenkurse</li>
+                                        <li>Einzelunterricht und Konversationskurse</li>
+                                    </ul>
+                                </div>
+                                <div style="margin-top: 20px;margin-bottom: 20px;">
+                                    <span class="unselectable" style="border-bottom: 1px solid orange;">Ihren Wünschen zugeschnittener Unterricht:</span> Der Unterricht passt sich Ihrem Lernstil, Ihren Interessen und Ihren Zielen an
+                                </div>
+                                <div>
+                                    <span class="unselectable" style="font-size: 1.1em">Einstufung und Progressüberprüfung</span>
+                                    <ul class="listOfAwesomeness" style="margin-bottom: 20px;">
+                                        <li>Progressüberprüfung wird je nach Bedarf, in der Regel aber nach jeder abgeschlossenen Sprachstufe durchgeführt</li>
+                                        <li>Einstufung verläuft auch in zwei Schritten - schriftlich und mündlich - und wird von den externen Sprachprüfern unter Zusammenarbeit mit mir durchgeführt</li>
+                                    </ul>
+                                </div>
+                                <div style="width: 500px; display: inline-block">
+                                    <span class="unselectable" style="font-size: 1.1em">Vorbereitungskurse</span>
+                                    <ul class="listOfAwesomeness" style="border: 0">
+                                        <li>Vorbereitungskurse auf die Goethe Zertifikate aller Stufen </li>
+                                    </ul>
+                                </div>
+                                <div style="width: 480px; display: inline-block">
+                                    <span class="unselectable" style="font-size: 1.1em">Freude im Unterricht und natürlich viel Spaß am Lernen</span> 
+                                    <ul class="listOfAwesomeness" style="border: 0">
+                                        <li>Lernen Sie über die Dinge reden, die Sie wirklich interessieren!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div style="font-size: 1.2em;">Auf ihren Wunsch: <span class="unselectable" style="border-bottom: 1px solid orange">Lernen lernen</span> (eine Methode, wie man erfogreich und effektiv lernt)</div>
+                            <div id="quoteMash"></div>
+                            <div style="text-align: center;">
+                                <span class="unselectable" onclick="$('nav td:nth-child(3) a').click()" id="moveInfo">Für Kontakt und Info <span class="unselectable">hier</span> klicken</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper move150" id="people-content"></div>
+                <div class="wrapper move300" id="about-content"></div>
+            </div>
+            <footer>
+                <div class="center-horiz" style="line-height: 52px">
+                    <span class="centerText-vert">
+                        <span style="cursor: pointer" onclick="$('#unloaded').show(0); setTimeout(function(){$('#loaded').addClass('blurred'); $('.license').addClass('show')},100);">
+                            Copyright &copy 
+                            <script type="text/javascript">
+                                var d = new Date();
+                                document.write(d.getFullYear())
+                            </script>
+                            Jana Kovacs Deutschunterricht
+                        </span>
+                    </span>
+                    <a id="contact" onclick="system.ignoreExit = true" href="mailto: admin@jana-deutsch.com?subject=Ticket: jana-deutsch.com [DO NOT EDIT THIS!]&body=Bitte fügen Sie eine kurze Beschreibung Ihres Problems, Ihrer Anmerkungen oder anderes.%0D%0DPlease add a short description of your problem, your suggestion or other.">Admin kontaktieren</a>
+                </div>
+            </footer>
+            <div class="cover" id="warnCover"></div>
+        </div>
+    </body>
+</html>
